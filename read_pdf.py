@@ -5,7 +5,9 @@ import numpy as np
 import ollama
 
 # Step 2: Read PDF
-reader = PdfReader("resume.pdf")
+pdf_path = input("Enter PDF file name (e.g., resume.pdf): ").strip()
+
+reader = PdfReader(pdf_path)
 
 text = ""
 for page in reader.pages:
